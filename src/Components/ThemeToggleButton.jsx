@@ -1,7 +1,7 @@
 // src/components/ThemeToggleButton.jsx
 import { IconButton } from '@mui/material';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
-import { useThemeContext } from '../context/ThemeContext';
+import { useThemeContext } from '../Context/ThemeContext';
 
 export default function ThemeToggleButton() {
   const { mode, toggleTheme } = useThemeContext();
