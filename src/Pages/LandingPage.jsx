@@ -23,10 +23,11 @@ const LandingPage = () => {
     <Box
       id="home"
       sx={{
-        minHeight: '110vh',
+        minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        pt:{xs:12,md:6},
         px: { xs: 2, md: 6 },
         bgcolor: theme.palette.background.default,
       }}
