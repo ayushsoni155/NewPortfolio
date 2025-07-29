@@ -168,7 +168,7 @@ const ProjectsPage = () => {
   <CardActions sx={{ px: 2, pb: 2 }}>
      <Button
                 component='a'
-                href='#about'
+                href={project.link}
                 variant="outlined"
                 size={isMobile ? 'small' : 'medium'}
                 sx={{
