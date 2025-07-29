@@ -50,7 +50,7 @@ export const ThemeProvider = ({ children }) => {
           borderRadius: 12,
         },
         typography: {
-          fontFamily: ['Poppins, sans-serif',
+          fontFamily: ['Poppins, sans-serif,Fira Code, monospace',
           ].join(','),
           // h1: {
           //   fontWeight: 700,
