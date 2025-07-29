@@ -9,6 +9,7 @@ import {
   Divider,
   Button,
 } from '@mui/material';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -29,30 +30,47 @@ const skills = {
     'JavaScript',
     'React.js',
     'Next.js',
+    'Redux',
+    'Context API',
+    'React Router',
     'Tailwind CSS',
     'Bootstrap',
     'MUI',
     'DaisyUI',
+    'Framer Motion',
+    'Chart.js',
   ],
   Backend: [
     'Node.js',
-    'Express',
+    'Express.js',
     'Java',
     'C++',
-    'Supabase',
     'Servlets',
     'JSP',
+    'JWT',
+    'MVC Architecture',
+    'REST APIs',
   ],
-  Databases: ['MongoDB', 'MySQL'],
-  'DevOps & Platforms': [
+  Databases: ['MySQL', 'MongoDB', 'Supabase', 'Firebase'],
+  DevOps: [
+    'Git',
+    'GitHub',
     'Vercel',
     'Render',
-    'GitHub',
-    'Postman',
     'AWS',
     'Razorpay',
   ],
+  Tools: [
+    'Postman',
+    'Axios',
+    'Cookies',
+    'Formik',
+    'Yup',
+    'dotenv',
+    'Google Fonts',
+  ],
 };
+
 
 const softSkills = [
   { label: 'Teamwork', icon: <Groups fontSize="small" /> },
@@ -140,7 +158,7 @@ const SkillsPage = () => {
       id="skills"
       sx={{
         px: { xs: 2, md: 6 },
-        py: 6,
+         pt:{xs:10, sm:12},
         bgcolor: theme.palette.background.default,
         color: theme.palette.text.primary,
       }}
@@ -183,7 +201,7 @@ const SkillsPage = () => {
                 {items.map((skill) => (
                   <Chip
                     key={skill}
-                    icon={<Code fontSize="small" />}
+                    // icon={<Code fontSize="small" />}
                     label={skill}
                     variant="outlined"
                     sx={{ fontWeight: 500 }}
@@ -314,11 +332,9 @@ const SkillsPage = () => {
             🏆 1st Prize – ProjectExpo 4.0 (2025)
           </Typography>
           <Typography variant="body2" color={theme.palette.text.secondary}>
-            Secured <b>1st place</b> and a <b>cash award of ₹3100</b> in{' '}
-            <b>ProjectExpo 4.0</b>, a national-level technical competition at
-            Mahakal Institute of Technology. Presented a full-stack project
-            tackling skill development using AI and MERN stack technologies,
-            recognized for innovation and practical impact.
+            Won <b>1st prize</b> and received a <b>cash award of ₹3100</b> in{' '}
+            <b>ProjectExpo 4.0</b>, a <b>college-level technical event</b> held at Mahakal Institute of Technology.
+            The showcased project was a full-stack skill development platform using <b>AI</b> and <b>MERN stack</b>.
           </Typography>
         </Box>
       </Box>

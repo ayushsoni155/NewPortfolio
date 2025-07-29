@@ -14,17 +14,18 @@ import MenuIcon from '@mui/icons-material/Menu';
 import DownloadIcon from '@mui/icons-material/Download';
 import { useState } from 'react';
 import ThemeToggleButton from './ThemeToggleButton';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 
 const navItems = [
   { label: '<Home/>', path: '#home' },
-  { label: '<About-Me/>', path: '#about' },
-  { label: '<My-Skills/>', path: '#skills' },
-  { label: '<Projects/>', path: '#projects' },
-  { label: '<Contact/>', path: '#contact' },
+  { label: '$About-Me', path: '#about'  },
+  { label: './My-Skills.js', path: '#skills' },
+  { label: '[Projects]', path: '#projects' },
+  { label: '{Contact}', path: '#contact' },
 ];
 
-const CV_LINK = 'https://drive.google.com/file/d/1jflOScOx8lhOwOWP_4BMVyJd-AMAd9cW/view';
+const CV_LINK = 'https://drive.google.com/file/d/168owjCCY3WKNAY_Xp7e98_d6PtcOA1iQ/view?usp=drive_link';
 export default function Navbar() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -51,15 +52,18 @@ export default function Navbar() {
         sx={{
           backgroundColor: theme.palette.background.paper,
           color: theme.palette.text.primary,
-          px: { xs: 2, sm: 3, md: 4 },
-          py: 0.5,
+          px: 0,
+          py: 0,
+          borderRadius:0,
+           borderBottomRightRadius:12,
+           borderBottomLeftRadius:12,
           borderBottom: `1px solid ${theme.palette.divider}`,
-          zIndex: 1100,
+           zIndex: 1100,
         }}
       >
-        <Toolbar sx={{ justifyContent: 'space-between', flexWrap: 'wrap' }}>
+        <Toolbar sx={{ justifyContent: 'space-between', flexWrap: 'nowrap', px:0.5 }}>
           {/* Logo + Menu for Tablet/Mobile */}
-          <Box display="flex" alignItems="center" gap={1.5}>
+          <Box display="flex" alignItems="center" gap={1}>
             {isTablet && (
               <>
                 <IconButton onClick={handleMenuOpen} sx={{ color: 'inherit' }}>
@@ -79,7 +83,8 @@ export default function Navbar() {
                       href={item.path}
                       onClick={handleMenuClose}
                       sx={{
-                        px: 3,
+                        fontSize:14,
+                        px: 2,
                         '&:hover': {
                           backgroundColor: hoverColor,
                         },
@@ -108,7 +113,7 @@ export default function Navbar() {
                     fontFamily: 'Poppins, sans-serif',
                   }}
                 >
-                  {`{Ayush Soni}`}
+                  {`(A.S)=>`}
                 </Typography>
                 {!isTablet && (
                   <Typography
@@ -118,7 +123,7 @@ export default function Navbar() {
                       color: theme.palette.text.secondary,
                     }}
                   >
-                    {`<Full-Stack Developer/>`}
+                    {`{<Full-Stack Developer/>}`}
                   </Typography>
                 )}
               </Box>
@@ -144,6 +149,7 @@ export default function Navbar() {
                       component="a"
                       href={item.path}
                       sx={{
+                        fontSize:14,
                         color: 'inherit',
                         fontWeight: 500,
                         borderRadius: '12px',

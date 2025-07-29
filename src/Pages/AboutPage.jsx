@@ -34,7 +34,7 @@ const AboutPage = () => {
       id="about"
       sx={{
         px: { xs: 2, md: 6 },
-        py: 6,
+          pt:{xs:10, sm:12},
         bgcolor: theme.palette.background.default,
         color: theme.palette.text.primary,
       }}
@@ -86,7 +86,7 @@ const AboutPage = () => {
               primary={<b>Software Trainee Intern</b>}
               secondary={
                 <>
-                  Backbencher Technologies Pvt Ltd (Jul 2025 – Aug 2026)
+                  Backbencher Technologies Pvt Ltd (45 Days)
                   <br />
                   Indore, Madhya Pradesh
                   <Box mt={1}>

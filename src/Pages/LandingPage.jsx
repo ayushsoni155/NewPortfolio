@@ -6,11 +6,12 @@ import {
   useMediaQuery,
   Stack,
 } from '@mui/material';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import DownloadIcon from '@mui/icons-material/Download';
 import { Link } from 'react-router-dom';
 
-const CV_LINK = 'https://drive.google.com/file/d/1jflOScOx8lhOwOWP_4BMVyJd-AMAd9cW/view';
+const CV_LINK = 'https://drive.google.com/file/d/168owjCCY3WKNAY_Xp7e98_d6PtcOA1iQ/view?usp=drive_link';
 
 const LandingPage = () => {
   const theme = useTheme();
@@ -23,11 +24,11 @@ const LandingPage = () => {
     <Box
       id="home"
       sx={{
-        minHeight: '100vh',
+        // pt:{xs:0, md:6, lg:8},
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        pt:{xs:12,md:6},
+        pt:{xs:10, sm:12},
         px: { xs: 2, md: 6 },
         bgcolor: theme.palette.background.default,
       }}
@@ -83,28 +84,29 @@ const LandingPage = () => {
                 More about me
               </Button>
               <Button
-                href={CV_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="contained"
-                size={isMobile ? 'small' : 'medium'}
-                startIcon={<DownloadIcon />}
-                sx={{
-                  textTransform: 'none',
-                  fontWeight: 500,
-                  borderRadius: 2,
-                  backgroundColor:
-                    theme.palette.mode === 'dark' ? '#ffffff' : '#000000',
-                  color:
-                    theme.palette.mode === 'dark' ? '#000000' : '#ffffff',
-                  '&:hover': {
-                    backgroundColor:
-                      theme.palette.mode === 'dark' ? '#f5f5f5' : '#222222',
-                  },
-                }}
-              >
-                Download CV
-              </Button>
+  href={CV_LINK}
+  target="_blank"
+  rel="noopener noreferrer"
+  variant="contained"
+  size={isMobile ? 'small' : 'medium'}
+  startIcon={<DownloadIcon />}
+  sx={{
+    textTransform: 'none',
+    fontWeight: 500,
+    borderRadius: 2,
+    backgroundColor:
+      theme.palette.mode === 'dark' ? '#ffffff' : '#000000',
+    color:
+      theme.palette.mode === 'dark' ? '#000000' : '#ffffff',
+    '&:hover': {
+      backgroundColor:
+        theme.palette.mode === 'dark' ? '#f5f5f5' : '#222222',
+    },
+  }}
+>
+ npm i ayush-cv
+</Button>
+
             </Stack>
           </motion.div>
         </Box>

@@ -9,7 +9,9 @@ import {
   Paper,
   Divider,
 } from '@mui/material';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
+
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -60,7 +62,7 @@ const ContactPage = () => {
       id="contact"
       sx={{
         px: { xs: 2, md: 6 },
-        py: 8,
+        pt:{xs:10, sm:12},
         bgcolor: theme.palette.background.default,
         color: theme.palette.text.primary,
       }}

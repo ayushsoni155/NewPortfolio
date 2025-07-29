@@ -12,6 +12,7 @@ import {
   Divider,
   IconButton
 } from '@mui/material';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { FiberManualRecord } from '@mui/icons-material';
 
@@ -59,7 +60,7 @@ const ProjectsPage = () => {
       id="projects"
       sx={{
         px: { xs: 2, md: 6 },
-        py: 6,
+        pt:{xs:10, sm:12},
         bgcolor: theme.palette.background.default,
         color: theme.palette.text.primary,
       }}
@@ -165,22 +166,28 @@ const ProjectsPage = () => {
   </CardContent>
 
   <CardActions sx={{ px: 2, pb: 2 }}>
-    <Button
-      size="small"
-      href={project.link}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+     <Button
+                component='a'
+                href='#about'
+                variant="outlined"
+                size={isMobile ? 'small' : 'medium'}
+                sx={{
+                  textTransform: 'none',
+                  fontWeight: 500,
+                  borderRadius: 2,
+                }}
+              >
+             
       Live Demo
     </Button>
-    <Button
+    {/* <Button
       size="small"
       href={project.repo}
       target="_blank"
       rel="noopener noreferrer"
     >
       GitHub
-    </Button>
+    </Button> */}
   </CardActions>
 </Card>
 
