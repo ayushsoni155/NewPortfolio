@@ -9,7 +9,7 @@ import ContactPage from "./Pages/ContactPage";
 import Footer from "./Components/Footer";
 
 function App() {
-  const [showIntro, setShowIntro] = useState(true);
+  const [showIntro, setShowIntro] = useState(false);
 
   return (
     <>
