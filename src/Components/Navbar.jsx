@@ -25,7 +25,7 @@ const navItems = [
   { label: '{Contact}', path: '#contact' },
 ];
 
-const CV_LINK = 'https://drive.google.com/file/d/1S6KnvSU9kXbi-0aJS_Al3aKY2V7x13n4/view?usp=drive_link';
+const CV_LINK = 'https://drive.google.com/file/d/1lG-0-h9lnu2BGoNygz_gLWgR4qD5eqcR/view?usp=drive_link';
 export default function Navbar() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -201,4 +201,5 @@ export default function Navbar() {
     </>
   );
 }
+
 
